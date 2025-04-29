@@ -73,14 +73,16 @@ def plot_quad_heatmap(df):
         col = 1
         fig.add_trace(heatmap, row=row, col=col)
 
-    # Final figure layout
     fig.update_layout(
         height=1600,
         width=1000,
-        title_text="Top Pokémon by Stat and Generation (Normalized Heatmaps)",
+        title_text="Top Pokémon by Stat and Generation (Normalized)",
         font=dict(size=14),
-        plot_bgcolor="white",
-        margin=dict(t=180)
+        margin=dict(t=180, l=0, r=0, b=0),
+        plot_bgcolor="rgba(0,0,0,0)",
+        paper_bgcolor="rgba(0,0,0,0)",
+        uniformtext=dict(minsize=12, mode='hide')
     )
+
 
     return fig
