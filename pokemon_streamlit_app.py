@@ -7,6 +7,7 @@ from app.selector_function import select_pokemon_number
 from app.image import display_image
 from app.pokey_data import display_pokemon_data
 from app.hp_type_comparison import display_hp_type_copmparison
+from app.rank_display import display_height_rank, display_weight_rank
 
 
 def main():
@@ -35,6 +36,11 @@ def main():
 
     # display image
     display_image(pokemon_number)
+ 
+    # Display height and weight ranks
+    print(pokemon_number)
+    display_height_rank(pokemon_number, df)
+    display_weight_rank(pokemon_number, df)
 
     # display dataframe
     display_pokemon_data(df, pokemon_number)
