@@ -25,7 +25,7 @@ def main():
 
     data = "assets/pokemon.csv"
 
-    # Loaad and clean the data
+    # Load and clean the data
     df = load_and_clean_data(data)
 
     # Input for Pokémon number
