@@ -48,12 +48,16 @@ def plot_quad_heatmap(df):
         name_grid = np.array(name_grid)
         stat_grid = np.array(stat_grid)
 
-        stat_min = np.min(stat_grid)
-        stat_max = np.max(stat_grid)
-        if stat_max - stat_min != 0:
-            stat_grid_normalized = (stat_grid - stat_min) / (stat_max - stat_min)
-        else:
-            stat_grid_normalized = stat_grid
+        stat_grid_normalized = np.zeros_like(stat_grid, dtype=float)
+
+        for i, row in enumerate(stat_grid):
+            row_min = np.min(row)
+            row_max = np.max(row)
+            if row_max - row_min != 0:
+                stat_grid_normalized[i] = (row - row_min) / (row_max - row_min)
+            else:
+                stat_grid_normalized[i] = 0
+
 
         heatmap = go.Heatmap(
             z=stat_grid_normalized,
