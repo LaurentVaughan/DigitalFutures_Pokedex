@@ -63,4 +63,5 @@ def load_and_clean_data(filepath):
     df = handle_gender_column(df)
     df = convert_data_types(df)
     df = drop_duplicates(df)
+    df['pokedex_number'] = df['pokedex_number'].astype(int)
     return df
