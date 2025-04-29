@@ -8,6 +8,7 @@ from app.image import display_image
 from app.pokey_data import display_pokemon_data
 from app.hp_type_comparison import display_hp_type_copmparison
 from app.rank_display import display_height_rank, display_weight_rank
+from app.pokey_heatmap import plot_quad_heatmap
 
 
 def main():
@@ -50,6 +51,15 @@ def main():
 
     # versus other pokemon
     display_hp_type_copmparison(df, chosen_pokedata)
+    
+    # Display the Legendary/Sub Legendary/Mythical/Normal Heatmaps
+    st.header("Top Pokémon Comparison Across Generations")
+
+    with st.expander("See Top Pokémon Stats Across Generations", expanded=True):
+        fig = plot_quad_heatmap(df)
+        st.plotly_chart(fig, use_container_width=True)
+
+
 
 
 if __name__ == "__main__":
