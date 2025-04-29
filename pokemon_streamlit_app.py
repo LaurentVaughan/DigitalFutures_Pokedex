@@ -54,8 +54,7 @@ def main():
     # Display the Legendary/Sub Legendary/Mythical/Normal Heatmaps
     st.header("Top Pokémon Comparison Across Generations")
 
-    # Apply filters
-    filtered_df = apply_filters(df)
+
     
     
      # Plot Total Points Distribution
