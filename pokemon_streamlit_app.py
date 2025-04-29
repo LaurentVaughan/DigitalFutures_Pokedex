@@ -38,7 +38,6 @@ def main():
     display_image(df, pokemon_number)
  
     # Display height and weight ranks
-    print(pokemon_number)
     display_height_rank(pokemon_number, df)
     display_weight_rank(pokemon_number, df)
 
@@ -51,8 +50,6 @@ def main():
 
     # versus other pokemon
     display_hp_type_copmparison(df, chosen_pokedata)
-
-
 
 
 if __name__ == "__main__":
