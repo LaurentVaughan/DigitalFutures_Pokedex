@@ -16,10 +16,11 @@ def main():
     data = "assets/pokemon.csv"
     df = pd.read_csv(data)
     filtered_df = apply_filters(df)
+    
     st.title("Pokemon Dataset Explorer")
-    st.table(filtered_df[2:5])
     
     pokemon_number = select_pokemon_number()
+    st.table(filtered_df[df["pokedex_number"] == pokemon_number])
 
     image_url = f"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/{pokemon_number}.png"
 
