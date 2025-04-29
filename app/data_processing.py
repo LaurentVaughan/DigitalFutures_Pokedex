@@ -1,7 +1,6 @@
 import pandas as pd
 import streamlit as st
 
-
 @st.cache_data
 def load_data(filepath):
     """Load the Pokémon dataset from a CSV file."""
