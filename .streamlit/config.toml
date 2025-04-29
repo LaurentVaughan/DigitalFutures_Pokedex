@@ -1,7 +1,7 @@
 [theme]
-primaryColor="#FF69B4"
-backgroundColor="#3D7DCA"
+primaryColor="#FF0000"
+backgroundColor="#FFCC00"
 secondaryBackgroundColor="#e0e0ef"
-textColor="#262730"
+textColor="#0074BD"
 borderColor="#643b9f"
 font="Roboto Man, monospace"
