@@ -18,5 +18,5 @@ def display_weight_rank(pokemon_number, df):
     pokemon_row = df[df['pokedex_number'] == pokemon_number]
     weight_rank = int(pokemon_row['weight_rank'].iloc[0])
     
-    st.text(f"{name} ranks {weight_rank} in terms of weight with {kgs}m!")
+    st.text(f"{name} ranks {weight_rank} in terms of weight with {kgs}kg!")
    
