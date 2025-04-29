@@ -39,16 +39,11 @@ def main():
     display_image(df, pokemon_number)
  
     # Display height and weight ranks
-    print(pokemon_number)
     display_height_rank(pokemon_number, df)
     display_weight_rank(pokemon_number, df)
 
     # display dataframe
     display_pokemon_data(df, pokemon_number)
-
-    # pokemon data variables
-    pokemon_type = df['type_1']
-    hp = df['hp']
 
     # versus other pokemon
     display_hp_type_copmparison(df, chosen_pokedata)
@@ -59,10 +54,6 @@ def main():
     with st.expander("See Top Pokémon Stats Across Generations", expanded=True):
         fig = plot_quad_heatmap(df)
         st.plotly_chart(fig, use_container_width=True)
-
-
-
-
 
 
 if __name__ == "__main__":
