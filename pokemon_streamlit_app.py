@@ -53,8 +53,14 @@ def main():
     
     # Display the Legendary/Sub Legendary/Mythical/Normal Heatmaps
     st.header("Top Pokémon Comparison Across Generations")
-
-
+ 
+    with st.expander("See Top Pokémon Stats Across Generations", expanded=True):
+         fig = plot_quad_heatmap(df)
+         st.plotly_chart(fig, use_container_width=True)
+    
+    
+    # Apply filters
+    filtered_df = apply_filters(df)
     
     
      # Plot Total Points Distribution
