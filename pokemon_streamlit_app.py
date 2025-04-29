@@ -44,7 +44,7 @@ def main():
     hp = df['hp']
 
     # versus other pokemon
-    display_hp_type_copmparison(df, pokemon_type, hp, chosen_pokedata)
+    display_hp_type_copmparison(df, chosen_pokedata)
 
     # Apply filters
     filtered_df = apply_filters(df)
