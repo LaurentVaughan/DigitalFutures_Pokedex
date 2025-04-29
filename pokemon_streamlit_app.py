@@ -8,6 +8,9 @@ from app.image import display_image
 from app.pokey_data import display_pokemon_data
 from app.hp_type_comparison import display_hp_type_copmparison
 
+import seaborn as sns
+from app.total_points_visuals import plot_total_points_distribution
+
 
 def main():
     """Main function to run the Streamlit app."""
@@ -48,7 +51,16 @@ def main():
 
     # Apply filters
     filtered_df = apply_filters(df)
+    
+    
+     # Plot Total Points Distribution
+    st.subheader("Distribution of Total Points")
+    fig = plot_total_points_distribution(df)
+    st.pyplot(fig)
 
 
 if __name__ == "__main__":
     main()
+
+
+
