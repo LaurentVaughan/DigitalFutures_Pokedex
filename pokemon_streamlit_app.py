@@ -35,7 +35,7 @@ def main():
         return
 
     # display image
-    display_image(pokemon_number)
+    display_image(df, pokemon_number)
  
     # Display height and weight ranks
     print(pokemon_number)
