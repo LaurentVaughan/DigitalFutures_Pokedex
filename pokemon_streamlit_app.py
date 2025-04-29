@@ -59,10 +59,6 @@ def main():
          st.plotly_chart(fig, use_container_width=True)
     
     
-    # Apply filters
-    filtered_df = apply_filters(df)
-    
-    
      # Plot Total Points Distribution
     st.subheader("Distribution of Total Points")
     fig = plot_total_points_distribution(df)
