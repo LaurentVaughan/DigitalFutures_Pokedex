@@ -1,7 +1,4 @@
 import streamlit as st
-import plotly.express as px
-import pandas as pd
-from app.filters import apply_filters
 from app.data_processing import load_and_clean_data
 from app.selector_function import select_pokemon_number
 from app.image import display_image
@@ -10,7 +7,6 @@ from app.hp_type_comparison import display_hp_type_copmparison
 from app.rank_display import display_height_rank, display_weight_rank
 from app.pokey_heatmap import plot_quad_heatmap
 
-import seaborn as sns
 from app.total_points_visuals import plot_total_points_distribution
 
 
@@ -19,8 +15,7 @@ def main():
     st.set_page_config(
         page_title="Podeydex",
         page_icon="🔴",
-        layout="wide",
-        initial_sidebar_state="auto",
+        layout="wide"
     )
 
     st.title("Pokemon Dataset Explorer")
@@ -40,7 +35,7 @@ def main():
 
     # display image
     display_image(df, pokemon_number)
- 
+
     # Display height and weight ranks
     display_height_rank(pokemon_number, df)
     display_weight_rank(pokemon_number, df)
@@ -50,16 +45,15 @@ def main():
 
     # versus other pokemon
     display_hp_type_copmparison(df, chosen_pokedata)
-    
+
     # Display the Legendary/Sub Legendary/Mythical/Normal Heatmaps
     st.header("Top Pokémon Comparison Across Generations")
- 
+
     with st.expander("See Top Pokémon Stats Across Generations", expanded=True):
-         fig = plot_quad_heatmap(df)
-         st.plotly_chart(fig, use_container_width=True)
-    
-    
-     # Plot Total Points Distribution
+        fig = plot_quad_heatmap(df)
+        st.plotly_chart(fig, use_container_width=True)
+
+    # Plot Total Points Distribution
     st.subheader("Distribution of Total Points")
     fig = plot_total_points_distribution(df)
     st.pyplot(fig)
@@ -67,6 +61,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
-
-

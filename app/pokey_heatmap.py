@@ -1,7 +1,7 @@
 import plotly.graph_objects as go
 from plotly.subplots import make_subplots
 import numpy as np
-import pandas as pd
+
 
 def plot_quad_heatmap(df):
     focus_columns = ['hp', 'attack', 'defense', 'speed', 'generation', 'status', 'name']
@@ -66,7 +66,7 @@ def plot_quad_heatmap(df):
             textfont={"size": 14},
             hovertemplate="Stat: %{y}<br>Generation: %{x}<br>Pokémon: %{text}<br>Value: %{z:.2f}<extra></extra>",
             xgap=0,
-            ygap=0  
+            ygap=0
         )
 
         row = idx + 1
@@ -83,6 +83,5 @@ def plot_quad_heatmap(df):
         paper_bgcolor="rgba(0,0,0,0)",
         uniformtext=dict(minsize=12, mode='hide')
     )
-
 
     return fig

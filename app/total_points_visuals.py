@@ -2,6 +2,7 @@ import streamlit as st
 import seaborn as sns
 import matplotlib.pyplot as plt
 
+
 def plot_total_points_distribution(df):
     # Distribution of Total Points
     fig, ax = plt.subplots(figsize=(10, 6))
