@@ -52,8 +52,7 @@ def main():
     # versus other pokemon
     display_hp_type_copmparison(df, chosen_pokedata)
 
-    # Apply filters
-    filtered_df = apply_filters(df)
+
 
 
 if __name__ == "__main__":
